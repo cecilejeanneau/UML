@@ -1,0 +1,14 @@
+@startuml exo 4
+
+class Vehicle {
+	-registerNumber
+}
+
+class Technician {
+	-name
+}
+
+' Technician "*" -- "*" Technician : maintains
+Technician "*" -- "*" Vehicle : maintains
+
+@enduml
