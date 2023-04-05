@@ -57,5 +57,14 @@
 			return $this->vehicles;
 		}
 
+		/**
+		 * Summary of setVehicles
+		 * @param mixed $vechicles
+		 * @return void
+		 */
+		public function setVehicles(array $vehicles): void {
+			$this->vehicles = $vehicles;
+		}
+
 	}
 ?>

@@ -1,0 +1,13 @@
+@startuml waiter_table
+
+	class Waiter {
+
+	}
+
+	class Table {
+		- Waiter
+	}
+
+	Waiter "1..*" --> "0..4" Table : serves 
+
+@enduml
