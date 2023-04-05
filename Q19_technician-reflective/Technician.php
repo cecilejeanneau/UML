@@ -41,8 +41,13 @@
 		 * @return void
 		 */
 		public function setSuperior(?Technician $superior): void {
-			if ($superior !== null && $superior->getSuperior() !== null) {
-				throw new Exception("A technician is supposed to have only one superior");
+			if ($superior !== null) {
+				$this->superior->addSubordinate($this);
+				// throw new Exception("A technician is supposed to have only one superior");
+			}
+			if ($this->superior !== null) {
+				$this->superior->removeSubordinate($this);
+				// throw new Exception("A technician is supposed to have only one superior");
 			}
 			if ($superior === $this) {
 				throw new Exception("A technician is not supposed to be his own subordinate");
