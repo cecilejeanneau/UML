@@ -50,8 +50,13 @@ class Table {
     public function addWaiter(?Waiter $waiter): void {
         if (!in_array($waiter, $this->waiters)) {
             $this->waiters[] = $waiter;
+			
+			$waiter->serve($this);
+			// update
         }
     }
+	// class dominante met à jour dans le cas d'une bidirectionnalité
+	// Table dominante parce que y a 1 minimum Waiter dans Table (niveau cardinalité)
 
 	/**
      * Summary of getNumber
