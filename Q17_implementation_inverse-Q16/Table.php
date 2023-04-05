@@ -21,9 +21,9 @@ class Table {
      * @param int $number
 	//  * @param Waiter $waiter
      */
-    public function __construct(int $number) {
+    public function __construct(int $number, Waiter $waiter) {
         $this->number = $number;
-        // $this->waiter = $waiter;
+        $this->waiter = $waiter;
     }
 
     /**
