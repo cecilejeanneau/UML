@@ -1,0 +1,5 @@
+@startuml Technician
+
+Technician "0..1" - "0..*" Technician : is the superior of subordinates
+
+@enduml
