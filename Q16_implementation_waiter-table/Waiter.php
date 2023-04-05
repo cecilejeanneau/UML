@@ -35,6 +35,26 @@ class Waiter {
             array_splice($this->tables, $index, 1);
         }
     }
+
+    /**
+     * Summary of release
+     * @param array $tables
+     * @return self
+     */
+    public function setTables(array $tables): self {
+        foreach($tables as $table) {
+            $this->serve($table);
+        }
+        return $this;
+    }
+
+    /**
+     * Summary of release
+     * @return array
+     */
+    public function getTables(): array {
+        return $this->tables;
+    }
 }
 
 ?>
